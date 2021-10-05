@@ -37,6 +37,7 @@ func main() {
 	taskHandler := handler.NewTaskHandler(&lib.TemplateEngine{}, curlExecutor, secretReader)
 
 	go api.RunHealthEndpoint("10998")
+
 	log.Fatal(sdk.NewKeptn(
 		serviceName,
 		sdk.WithHandler(
